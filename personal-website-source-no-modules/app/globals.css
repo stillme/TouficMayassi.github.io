@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 51, 51, 51;
+  --background-rgb: 248, 249, 250;
+  --primary-color: 44, 62, 80;
+  --secondary-color: 52, 152, 219;
+  --accent-color: 241, 196, 15;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-open-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.section-heading {
+  @apply text-2xl md:text-3xl font-bold text-[#2c3e50] mb-6 border-b-2 border-[#3498db] pb-2 inline-block;
+}
+
+.btn-primary {
+  @apply bg-[#3498db] hover:bg-[#2980b9] text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-100 text-[#2c3e50] font-bold py-2 px-4 rounded border border-[#3498db] transition-colors duration-300;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+}
+
+.timeline-item {
+  @apply relative pl-8 pb-8 border-l-2 border-[#3498db];
+}
+
+.timeline-item::before {
+  content: '';
+  @apply absolute w-4 h-4 bg-[#3498db] rounded-full -left-[9px] top-0;
+}
+
+.timeline-item:last-child {
+  @apply border-l-0;
+}
+
+.skill-bar {
+  @apply h-2 bg-[#3498db] rounded-full;
+}
+
+.skill-container {
+  @apply w-full bg-gray-200 rounded-full h-2 mb-6;
+}
